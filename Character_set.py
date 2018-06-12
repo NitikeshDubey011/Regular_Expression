@@ -22,5 +22,9 @@ print(re.search('\w\w\w\w\w', 'abc_.3df'))
 # output: None
 # output is None because it is not falling under given condition.'.' is not in the condition
 
-print(re.findall('\w\w\w\w','abcdef'))
+# \W is the complement of \w
+print(re.search('\w\w\w\w\W', 'abc_.3df').group())
+# output: abc_.
+
+print(re.findall('\w\w\w\w', 'abcdef'))
 # findall condition with \w
