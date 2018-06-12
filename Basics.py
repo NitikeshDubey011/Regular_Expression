@@ -2,10 +2,14 @@ import re
 
 # string
 stringData = "Data is easy to get."
-# search a from given string
 
-# search is used to search the data from anywhere in the sentence
-# span(1,2) is the index of the occurrence of the words i.e. 'a' is occurred at index 1 and end at index at 2
+#syntax
+# re.search(pattern,string,flags)
+# re.match(pattern,string,flags)
+
+''' search a from given string
+    search is used to search the data from anywhere in the sentence
+    span(1,2) is the index of the occurrence of the words i.e. 'a' is occurred at index 1 and end at index at 2'''
 print(re.search('a', stringData))
 
 # group() is used to get the text
