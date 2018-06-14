@@ -39,7 +39,7 @@ print(re.findall('(\d)+', data_string_data))
 
 print(re.findall('((\d)+)', data_string_data))
 
-# slices 
+# slices
 data_in = re.findall('((\d)+)', data_string_data)[0][0]
 print(data_in)
 
