@@ -3,7 +3,9 @@ re.match, re.search, re.findall. They are used a addition options in regular exp
 
 
 ^(carat sign) = this is used to find the match at the beginning of the string
-$(Dollar sign) = this is used to find the match at the ending of the string'''
+$(Dollar sign) = this is used to find the match at the ending of the string
+\B = The metacharacter \b is an anchor like the caret and the dollar sign.
+It matches at a position that is called a "word boundary". This match is zero-length.'''
 
 import re
 
@@ -41,3 +43,9 @@ print(re.findall('Muslim',news_data,flags=re.I))
 # re.DOTALL is used to read the full paragraph including newline
 print(re.match('.*',news_data).group())
 print(re.match('.*',news_data,flags=re.DOTALL).group())
+
+# to find the 'z' in the string or in between the string not started with z or ending with z
+stringss='The quick brown fox jumps over the lazy dog.'
+print(re.search('\Bz\B',stringss))
+print(re.search('\Bz\B','zebra'))
+print(re.search('\Bz\B','bananaz'))
