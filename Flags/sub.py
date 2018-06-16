@@ -21,3 +21,15 @@ print(re.sub('(\d+)', lambda x: str(square(int(x.group(0)))), str_data))
 
 input_data = 'eat laugh sleep study'
 print(re.sub('\w+',lambda m:m.group(0)+"ing",input_data))
+
+
+String_data='Merry Merry Christmas'
+print(re.search(r'(\w+ )(\1)',String_data).groups())
+
+print(re.search(r'(\w+ )(\1)',String_data).group(1,2))
+
+temp=re.sub(r'(\w+) (\1)',r'Happy \1',String_data)
+print(temp)
+
+temp2=re.sub(r'(\w+) (\1)',r'\1 Happy',String_data)
+print(temp2)
